@@ -2,3 +2,5 @@
 #maybe javaScript later.
 
 image is not here.
+
+create respository ubuntun.
