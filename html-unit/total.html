@@ -2,6 +2,37 @@
 <html>
 <head>
 	<style type="text/css">
+		div#container
+		{
+			width:100%;
+		}
+		
+		div#header
+		{
+			background-color:#99bbbb;
+		}
+		
+		div#menu
+		{
+			background-color:#ffff99;
+			width:20%;
+			float:left;
+		}
+		
+		div#content
+		{
+			background-color:#EEEEEE;
+			width:80%;
+			float:left;
+		}
+		
+		div#footer
+		{
+			background-color:#99bbbb;
+			clear:both;
+			text-align:center;
+		}
+		
 		body 
 		{
 			color:gray;
@@ -14,19 +45,17 @@
 		body h1
 		{
 			color:black;
-			font-size:3em;
 			text-align:center;
+			margin-bottom:0px;
 		}
 		
 		body h2,h3,h4,h5,h6
 		{
-			font-size:1.5em;
 			text-indent:1cm;
 		}
 		
 		body h4
 		{
-			font-size:1.2em;
 			text-indent:1.5cm;
 		}
 		
@@ -77,287 +106,309 @@
 	</style>
 </head>
 <body>
-	<h1>HTML</h1>
-	
-	<div>
-		<h2>目录</h2>
-		<ul class="none">
-			<li><a href="#HTML 简介">简介</a></li>
-			<li><a href="#HTML 基础">基础</a></li>
-			<li><a href="#HTML 元素">元素</a></li>
-			<li><a href="#HTML 属性">属性</a></li>
-			<li><a href="#HTML 标题">标题</a></li>
-			<li><a href="#HTML 段落">段落</a></li>
-			<li><a href="#HTML 格式化">格式化</a></li>
-			<li><a href="#HTML 样式">样式</a></li>
-			<li><a href="#HTML 链接">链接</a></li>
-			<li><a href="#HTML 图像">图像</li>
-			<li><a href="#HTML 表格">表格</a></li>
+	<div id="container">
+		<div id="header">
+			<h1>HTML</h1>
+		</div>
+		
+		<div id="menu">
+			<h2>目录</h2>
+			<ul class="none">
+				<li><a href="#HTML 简介">简介</a></li>
+				<li><a href="#HTML 基础">基础</a></li>
+				<li><a href="#HTML 元素">元素</a></li>
+				<li><a href="#HTML 属性">属性</a></li>
+				<li><a href="#HTML 标题">标题</a></li>
+				<li><a href="#HTML 段落">段落</a></li>
+				<li><a href="#HTML 格式化">格式化</a></li>
+				<li><a href="#HTML 样式">样式</a></li>
+				<li><a href="#HTML 链接">链接</a></li>
+				<li><a href="#HTML 图像">图像</a></li>
+				<li><a href="#HTML 表格">表格</a></li>
+				<li><a href="#HTML 列表">列表</a></li>
+			</ul>
+		</div>
+		
+		<div id="content">
+		<br />
+		
+		<h2><a id="HTML 简介">HTML 简介</a></h2>
+		<ul>
+			<li>HTML 指的是超文本标记语言(Hyper Text Markup Language)</li>
+			<li>HTML 不是一种编程语言，而是一种标记语言(Marlup Language)</li>
+			<li>标记语言是一套标记标签(Markup Tag)</li>
+			<li>HTML 使用标记标签来描述网页</li>
 		</ul>
-	</div>
-	
-	<br />
-	
-	<h2><a id="HTML 简介">HTML 简介</a></h2>
-	<ul>
-		<li>HTML 指的是超文本标记语言(Hyper Text Markup Language)</li>
-		<li>HTML 不是一种编程语言，而是一种标记语言(Marlup Language)</li>
-		<li>标记语言是一套标记标签(Markup Tag)</li>
-		<li>HTML 使用标记标签来描述网页</li>
-	</ul>
-	
-	<hr />
-	
-	<h2><a id="HTML 基础">HTML 基础</a></h2>
-	
-	<ul>
-		<li>html标题 h1,h2,h3,h4,h5,h6</li>
-		<li>html文本 p</li>
-		<li>html链接 a</li>
-		<li>html图像 src</li>
-	</ul>
-	
-	<hr />
-	
-	<h2><a id="HTML 元素">HTML 元素</a></h2>
-	
-	<ul>
-		<li>HTML 元素以开始标签起始</li>
-		<li>HTML 元素以结束标签终止</li>
-		<li>元素的内容是开始标签和结束标签之间的内容</li>
-		<li>某些 HTML元素具有空内容(empty content)</li>
-		<li>空元素在开始标签中进行关闭(以开始标签的结束而结束)</li>
-		<li>大多数 HTML元素可拥有属性</li>
-	</ul>
-	
-	<p><b>br hr就属于没有关闭标签的空元素</b></p>
-	
-	<hr />
-	
-	<h2><a id="HTML 属性">HTML 属性</a></h2>
-	
-	<ul>
-		<li>HTML 标签可以拥有属性。属性提供了有关HTML元素<b>更多的信息</b></li>
-		<li>属性总是以名称/值对的形式出现,例如:name="value"</li>
-		<li>属性总是在HTML元素的开始标签中规定</li>
-	</ul>
-	
-	<hr />
-	
-	<h2><a id="HTML 标题">HTML 标题</a></h2>
-	
-	<ul>
-		<li>标题(heading)是通过&lt;h1&gt;~&lt;h6&gt;等标签进行定义的.</li>
-		<li>&lt;h1&gt;定义最大的标题,&lt;h6&gt;定义最小的标题.</li>
-		<li>浏览器会自动的在标题的前后添加空行.</li>
-		<li>默认情况下,HTML会自动的在块级元素前后添加一个额外的空行,比如段落、标题元素前后.</li>
-		<li>请确保将HTML heading标签只用于标题.不要仅仅是为了产生粗体或大号的文本而使用标题.</li>
-		<li>搜索引擎使用标题为您的网页结构和内容编制索引</li>
-		<li>用户可以通过标题来快速浏览网页,所以用标题来呈现文档结构很重要.</li>
-	</ul>
-	
-	<h4>HTML 注释</h4>
-	
-	<pre><b>实例:</b>  &lt;!-- This is a comment --&gt;</pre>
-	
-	<hr />
-	
-	<h2><a id="HTML 段落">HTML 段落</a></h2>
-	
-	<ul>
-		<li>浏览器会自动的在段落的前后加上空行(&lt;p&gt;是块级元素)</li>
-		<li>使用空的&lt;p&gt;&lt;/p&gt;插入空行是个坏习惯,用&lt;br/&gt;代替它.</li>
-		<li>当显示页面的时候,浏览器会移除源代码中多余的空行和空格.所有连续的空行和空格都被视作一个空格.</li>
-	</ul>
-	
-	<hr />
-	
-	<h2><a id="HTML 格式化">HTML 格式化</a></h2>
-	
-	<h4>文本格式化标签</h4>
-	
-	<table width="70%">
-		<tr>
-			<th width="40%">标签</th>
-			<th width="60%">描述</th>
-		</tr>
-		<tr>
-			<td>&lt;b&gt;</tb>
-			<td>定义粗体文本</td>
-		</tr>
-		<tr>
-			<td>&lt;big&gt;</td>
-			<td>定义大号字体</td>
-		</tr>
-		<tr>
-			<td>&lt;em&gt;</td>
-			<td>定义着重字体</td>
-		</tr>
-		<tr>
-			<td>&lt;i&gt;</td>
-			<td>定义斜体字</td>
-		</tr>
-		<tr>
-			<td>&lt;small&gt;</td>
-			<td>定义小号字</td>
-		</tr>
-		<tr>
-			<td>&lt;strong&gt;</td>
-			<td>定义加重语气</td>
-		</tr>
-		<tr>
-			<td>&lt;sub&gt;</td>
-			<td>定义下标字</td>
-		</tr>
-		<tr>
-			<td>&lt;sup&gt;</td>
-			<td>定义上标字</td>
-		</tr>
-		<tr>
-			<td>&lt;ins&gt;</td>
-			<td>定义插入字</td>
-		</tr>
-		<tr>
-			<td>&lt;del&gt;</td>
-			<td>定义删除字</td>
-		</tr>
-	</table>
-	
-	<h4>"计算机"输出标签</h4>
-	
-	<table width="70%">
-		<tr>
-			<th width="40%">标签</th>
-			<th width="60%">描述</th>
-		</tr>
-		<tr>
-			<td>&lt;code&gt;</td>
-			<td>定义计算机代码</td>
-		</tr>
-		<tr>
-			<td>&lt;kbd&gt;</td>
-			<td>定义键盘码</td>
-		</tr>
-		<tr>
-			<td>&lt;samp&gt;</td>
-			<td>定义计算机代码样本</td>
-		</tr>
-		<tr>
-			<td>&lt;tt&gt;</td>
-			<td>定义打字机代码</td>
-		</tr>
-		<tr>
-			<td>&lt;var&gt;</td>
-			<td>定义变量</td>
-		</tr>
-		<tr>
-			<td>&lt;pre&gt;</td>
-			<td>定义预格式文本</td>
-		</tr>
-	</table>
-	
-	<h4>引用和术语定义</h4>
-	
-	<table width="70%">
-		<tr>
-			<th width="40%">标签</th>
-			<th width="60%">描述</th>
-		</tr>
-		<tr>	
-			<td>&lt;abbr&gt;</td>
-			<td>定义缩写</td>
-		</tr>
-		<tr>	
-			<td>&lt;acronym&gt;</td>
-			<td>定义首字母缩写</td>
-		</tr>
-		<tr>	
-			<td>&lt;address&gt;</td>
-			<td>定义地址</td>
-		</tr>
-		<tr>	
-			<td>&lt;bdo&gt;</td>
-			<td>定义文字方向</td>
-		</tr>
-		<tr>	
-			<td>&lt;blockquote&gt;</td>
-			<td>定义长的引用</td>
-		</tr>
-		<tr>	
-			<td>&lt;q&gt;</td>
-			<td>定义短的引用</td>
-		</tr>
-		<tr>	
-			<td>&lt;cite&gt;</td>
-			<td>定义引用、引证</td>
-		</tr>
-		<tr>	
-			<td>&lt;dfn&gt;</td>
-			<td>定义一个定义项目</td>
-		</tr>
-	</table>
-	
-	<hr />
-	
-	<h4><a id="HTML 样式">HTML 样式</a></h4>
-	
-	<ul style="list-style-type:circle">
-		<li>外部样式表</li>
-		<li>内部样式表</li>
-		<li>内联样式表</li>
-	</ul>
-	
-	<b>外部样式表:</b>
-	<pre>
+		
+		<hr />
+		
+		<h2><a id="HTML 基础">HTML 基础</a></h2>
+		
+		<ul>
+			<li>html标题 h1,h2,h3,h4,h5,h6</li>
+			<li>html文本 p</li>
+			<li>html链接 a</li>
+			<li>html图像 src</li>
+		</ul>
+		
+		<hr />
+		
+		<h2><a id="HTML 元素">HTML 元素</a></h2>
+		
+		<ul>
+			<li>HTML 元素以开始标签起始</li>
+			<li>HTML 元素以结束标签终止</li>
+			<li>元素的内容是开始标签和结束标签之间的内容</li>
+			<li>某些 HTML元素具有空内容(empty content)</li>
+			<li>空元素在开始标签中进行关闭(以开始标签的结束而结束)</li>
+			<li>大多数 HTML元素可拥有属性</li>
+		</ul>
+		
+		<p><b>br hr就属于没有关闭标签的空元素</b></p>
+		
+		<hr />
+		
+		<h2><a id="HTML 属性">HTML 属性</a></h2>
+		
+		<ul>
+			<li>HTML 标签可以拥有属性。属性提供了有关HTML元素<b>更多的信息</b></li>
+			<li>属性总是以名称/值对的形式出现,例如:name="value"</li>
+			<li>属性总是在HTML元素的开始标签中规定</li>
+		</ul>
+		
+		<hr />
+		
+		<h2><a id="HTML 标题">HTML 标题</a></h2>
+		
+		<ul>
+			<li>标题(heading)是通过&lt;h1&gt;~&lt;h6&gt;等标签进行定义的.</li>
+			<li>&lt;h1&gt;定义最大的标题,&lt;h6&gt;定义最小的标题.</li>
+			<li>浏览器会自动的在标题的前后添加空行.</li>
+			<li>默认情况下,HTML会自动的在块级元素前后添加一个额外的空行,比如段落、标题元素前后.</li>
+			<li>请确保将HTML heading标签只用于标题.不要仅仅是为了产生粗体或大号的文本而使用标题.</li>
+			<li>搜索引擎使用标题为您的网页结构和内容编制索引</li>
+			<li>用户可以通过标题来快速浏览网页,所以用标题来呈现文档结构很重要.</li>
+		</ul>
+		
+		<h4>HTML 注释</h4>
+		
+		<pre><b>实例:</b>  &lt;!-- This is a comment --&gt;</pre>
+		
+		<hr />
+		
+		<h2><a id="HTML 段落">HTML 段落</a></h2>
+		
+		<ul>
+			<li>浏览器会自动的在段落的前后加上空行(&lt;p&gt;是块级元素)</li>
+			<li>使用空的&lt;p&gt;&lt;/p&gt;插入空行是个坏习惯,用&lt;br/&gt;代替它.</li>
+			<li>当显示页面的时候,浏览器会移除源代码中多余的空行和空格.所有连续的空行和空格都被视作一个空格.</li>
+		</ul>
+		
+		<hr />
+		
+		<h2><a id="HTML 格式化">HTML 格式化</a></h2>
+		
+		<h4>文本格式化标签</h4>
+		
+		<table width="70%">
+			<tr>
+				<th width="40%">标签</th>
+				<th width="60%">描述</th>
+			</tr>
+			<tr>
+				<td>&lt;b&gt;</tb>
+				<td>定义粗体文本</td>
+			</tr>
+			<tr>
+				<td>&lt;big&gt;</td>
+				<td>定义大号字体</td>
+			</tr>
+			<tr>
+				<td>&lt;em&gt;</td>
+				<td>定义着重字体</td>
+			</tr>
+			<tr>
+				<td>&lt;i&gt;</td>
+				<td>定义斜体字</td>
+			</tr>
+			<tr>
+				<td>&lt;small&gt;</td>
+				<td>定义小号字</td>
+			</tr>
+			<tr>
+				<td>&lt;strong&gt;</td>
+				<td>定义加重语气</td>
+			</tr>
+			<tr>
+				<td>&lt;sub&gt;</td>
+				<td>定义下标字</td>
+			</tr>
+			<tr>
+				<td>&lt;sup&gt;</td>
+				<td>定义上标字</td>
+			</tr>
+			<tr>
+				<td>&lt;ins&gt;</td>
+				<td>定义插入字</td>
+			</tr>
+			<tr>
+				<td>&lt;del&gt;</td>
+				<td>定义删除字</td>
+			</tr>
+		</table>
+		
+		<h4>"计算机"输出标签</h4>
+		
+		<table width="70%">
+			<tr>
+				<th width="40%">标签</th>
+				<th width="60%">描述</th>
+			</tr>
+			<tr>
+				<td>&lt;code&gt;</td>
+				<td>定义计算机代码</td>
+			</tr>
+			<tr>
+				<td>&lt;kbd&gt;</td>
+				<td>定义键盘码</td>
+			</tr>
+			<tr>
+				<td>&lt;samp&gt;</td>
+				<td>定义计算机代码样本</td>
+			</tr>
+			<tr>
+				<td>&lt;tt&gt;</td>
+				<td>定义打字机代码</td>
+			</tr>
+			<tr>
+				<td>&lt;var&gt;</td>
+				<td>定义变量</td>
+			</tr>
+			<tr>
+				<td>&lt;pre&gt;</td>
+				<td>定义预格式文本</td>
+			</tr>
+		</table>
+		
+		<h4>引用和术语定义</h4>
+		
+		<table width="70%">
+			<tr>
+				<th width="40%">标签</th>
+				<th width="60%">描述</th>
+			</tr>
+			<tr>	
+				<td>&lt;abbr&gt;</td>
+				<td>定义缩写</td>
+			</tr>
+			<tr>	
+				<td>&lt;acronym&gt;</td>
+				<td>定义首字母缩写</td>
+			</tr>
+			<tr>	
+				<td>&lt;address&gt;</td>
+				<td>定义地址</td>
+			</tr>
+			<tr>	
+				<td>&lt;bdo&gt;</td>
+				<td>定义文字方向</td>
+			</tr>
+			<tr>	
+				<td>&lt;blockquote&gt;</td>
+				<td>定义长的引用</td>
+			</tr>
+			<tr>	
+				<td>&lt;q&gt;</td>
+				<td>定义短的引用</td>
+			</tr>
+			<tr>	
+				<td>&lt;cite&gt;</td>
+				<td>定义引用、引证</td>
+			</tr>
+			<tr>	
+				<td>&lt;dfn&gt;</td>
+				<td>定义一个定义项目</td>
+			</tr>
+		</table>
+		
+		<hr />
+		
+		<h4><a id="HTML 样式">HTML 样式</a></h4>
+		
+		<ul style="list-style-type:circle">
+			<li>外部样式表</li>
+			<li>内部样式表</li>
+			<li>内联样式表</li>
+		</ul>
+		
+		<b>外部样式表:</b>
+		<pre>
 &lt;head&gt;
 	<code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;*.css&quot;&gt;</code>
 &lt;/head&gt;
-	</pre>
-	
-	<b>内部样式表</b>
-	<pre>
+		</pre>
+		
+		<b>内部样式表</b>
+		<pre>
 &lt;head&gt;
 	<code>&lt;style type=&quot;text/css&quot;&gt;
 		body {background-color:red;}
 		p {color:black;}
 	&lt;/style&gt;</code>
 &lt;/head&gt;
-	</pre>
-	
-	<b>内联样式:</b>
-	
-	<pre>
+		</pre>
+		
+		<b>内联样式:</b>
+		
+		<pre>
 <code>&lt;p style=&quot;color:red; margin-left:20px&quot;&gt;
 	Some Text
 &lt;/p&gt;</code>
-	</pre>
-	
-	<hr />
-	
-	<h4><a id="HTML 链接">HTML 链接</a></h4>
-	
-	<ul>
-		<li>通过使用href属性 创建一个指向另一个文档的链接</li>
-		<li>通过使用name(id)属性 创建文档的书签</li>
-	</ul>
-	
-	<hr />
-	
-	<h4><a name="HTML 图像">HTML 图像</a></h4>
-	
-	<ul>
-		<li>&lt;img&gt;是空标签，只包含属性，并没有闭合标签</li>
-		<li>加载图片需要时间，慎用图片</li>
-	</ul>
-	
-	<hr />
-	
-	<h4><a name="HTML 表格">HTML 表格</a></h4>
-	
-	<ul>
-		<li>表格由&lt;table&gt;标签来定义。每个表格均有若干行(由&lt;tr&gt;标签定义),每行被分为若干单元格(由&lt;td&gt;标签定义).</li>
-		<li>表格的表头有&lt;th&gt;来定义，大多数浏览器会把表头显示为粗体居中的文本。</li>
-		<li>空格占位符 &amp;nbsp 会解决空单元格显示不友好问题</li>
-	</ul>
+		</pre>
+		
+		<hr />
+		
+		<h4><a id="HTML 链接">HTML 链接</a></h4>
+		
+		<ul>
+			<li>通过使用href属性 创建一个指向另一个文档的链接</li>
+			<li>通过使用name(id)属性 创建文档的书签</li>
+		</ul>
+		
+		<hr />
+		
+		<h4><a name="HTML 图像">HTML 图像</a></h4>
+		
+		<ul>
+			<li>&lt;img&gt;是空标签，只包含属性，并没有闭合标签</li>
+			<li>加载图片需要时间，慎用图片</li>
+		</ul>
+		
+		<hr />
+		
+		<h4><a name="HTML 表格">HTML 表格</a></h4>
+		
+		<ul>
+			<li>表格由&lt;table&gt;标签来定义。每个表格均有若干行(由&lt;tr&gt;标签定义),每行被分为若干单元格(由&lt;td&gt;标签定义).</li>
+			<li>表格的表头有&lt;th&gt;来定义，大多数浏览器会把表头显示为粗体居中的文本。</li>
+			<li>空格占位符 &amp;nbsp 会解决空单元格显示不友好问题</li>
+		</ul>
+		
+		<hr />
+		
+		<h4><a name="HTML 列表">HTML 列表</a></h4>
+		
+		<ol>
+			<li>列表分为有序列表、无序列表、定义列表</li>
+			<li>有序列表 &lt;ol&gt;element&le;/ol&gt;</li>
+			<li>无序列表 &lt;ul&gt;element&lt;/ul&gt;</li>
+			<li>定义列表 &lt;dl /&gt; &lt;dt /&gt; &lt;dd /&gt;</li>
+		</ol>
+		</div>
+		
+		<div id="footer">
+		Copyright W3School.com.cn
+		</div>
+	</div>
 </body>
 </html>
