@@ -3,4 +3,4 @@
 
 image is not here.
 
-create respository ubuntun.
+create respository Ubuntu.
