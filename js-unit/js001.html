@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <p>JavaScript 能够直接写入 HTML输入流中</p>
+
+  <script>
+    document.write("<h1>This is a heading.</h1>");
+    document.write("<p>This is a paragraph.</p>");
+  </script>
+
+  <p>只能在 HTML 输入流中使用<strong>document.write</strong>，如果在文档加载后使用它(比如在函数中)，会覆盖整个文档</p>
+</body>
+</html>
