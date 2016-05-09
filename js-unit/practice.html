@@ -9,7 +9,20 @@
     }
   </script>
 </head>
-<body onload="message()">
+<body onload="">
+  <script type="text/javascript">
+    function Person(firstName, lastName,age, everyColor)
+    {
+      this.firstName = firstName
+      this.lastName = lastName
+      this.age = age
+      this.everyColor = everyColor
+    }
+
+    Gates=new Person('Bill', 'Gates', 56, ' years old')
+
+    document.write(Gates.firstName + " is " + Gates.age + Gates.everyColor)
+  </script>
 
 </body>
 </html>
