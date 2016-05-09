@@ -1,0 +1,24 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+  </script>
+</head>
+<body>
+  <script type="text/javascript">
+  var x=prompt("请输入0到10之间的数:","");
+  try {
+    if(x > 10) throw "Err1";
+    if(x < 0) throw "Err2";
+    if(isNaN(x)) throw "Err3";
+  } catch (e) {
+    if(e == "Err1") alert("错误该值太大");
+    if(e == "Err2") alert("错误改制太小");
+    if(e == "Err3") alert("错误该值不是数字");
+  } finally {
+
+  }
+  </script>
+</body>
+</html>
