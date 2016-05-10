@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="../tryCatch.js">
+  </script>
+</head>
+<body>
+  <script type="text/javascript">
+  try
+  {
+    var date=new Date()
+    document.write(date + "<br />")
+    document.write("<p>从1970/01/01至今已过去 <b>" + date.getTime() + "</b> 毫秒</p>")
+    document.write(date.toUTCString() + "<pre><br /><br /></pre>")
+
+    date.setFullYear(1992,10,2)
+    document.write(date + "<br />")
+    document.write("<p>从1970/01/01至今已过去 <b>" + date.getTime() + "</b> 毫秒</p>")
+    document.write(date.toUTCString() + "<pre><br /><br /></pre>")
+
+    var date1=new Date()
+    var weekDays=new Array(7)
+    weekDays[0]="星期日"
+    weekDays[1]="星期一"
+    weekDays[2]="星期二"
+    weekDays[3]="星期三"
+    weekDays[4]="星期四"
+    weekDays[5]="星期五"
+    weekDays[6]="星期六"
+
+    document.write("<p>今天是" + weekDays[date1.getDay()] +"</p>")
+  }
+  catch (e)
+  {
+    errInfo(e)
+  }
+  </script>
+</body>
+</html>

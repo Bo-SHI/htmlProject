@@ -1,0 +1,30 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="../tryCatch.js">
+  </script>
+</head>
+<body>
+  <script type="text/javascript">
+  try
+  {
+    var x
+    document.write("<p>只有17位:")
+    x=12345678901234567890
+    document.write(x + "</p>")
+
+    document.write("<p>0.2 + 0.1 = ")
+    x=0.2+0.1
+    document.write(x + "</p>")
+
+    document.write("可分别乘以10再除以10:")
+    x=(0.2*10+0.1*10)/10
+    document.write(x + "</p>")
+  }
+  catch(e)
+  {
+    errInfo(e)
+  }
+  </script>
+</body>
+</html>

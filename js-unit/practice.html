@@ -11,17 +11,10 @@
 </head>
 <body onload="">
   <script type="text/javascript">
-    function Person(firstName, lastName,age, everyColor)
-    {
-      this.firstName = firstName
-      this.lastName = lastName
-      this.age = age
-      this.everyColor = everyColor
-    }
-
-    Gates=new Person('Bill', 'Gates', 56, ' years old')
-
-    document.write(Gates.firstName + " is " + Gates.age + Gates.everyColor)
+    var date=new Date()
+    document.write(date.getDate() + "<br />")
+    document.write(date.getMonth() + "<br />")
+    document.write(date.getYear() + "<br />")
   </script>
 
 </body>
