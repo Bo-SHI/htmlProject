@@ -11,10 +11,15 @@
 </head>
 <body onload="">
   <script type="text/javascript">
-    var date=new Date()
-    document.write(date.getDate() + "<br />")
-    document.write(date.getMonth() + "<br />")
-    document.write(date.getYear() + "<br />")
+    var c_name="username";
+    var exdate=new Date();
+    var expiredays
+    exdate.setDate(exdate.getDate()+expiredays);
+
+    var cookies=c_name+ "=" +escape("bob")+
+    ((expiredays==null) ? "" : "; expires="+exdate.toGMTString());
+
+    alert(cookies);
   </script>
 
 </body>
