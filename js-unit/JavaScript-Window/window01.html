@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="../tryCatch.js">
+  </script>
+</head>
+<body>
+  <p id="demo"></p>
+  <p id="screen"></p>
+  <script>
+  try
+  {
+    var w=window.innerWidth || document.documentElement.cilentWidth || document.body.clientWidth;
+    var h=window.innertHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+    x=document.getElementById("demo");
+    x.innerHTML="浏览器的内部窗口宽度：" + w + "， 高度： " + h + ".";
+
+    var aw=screen.availWidth;
+    var ah=screen.availHeight;
+
+    y=document.getElementById("screen");
+    y.innerHTML="浏览器的可用宽度： " + aw + "， 高度： " + ah + ".";
+  }
+  catch(e)
+  {
+    errInfo(e);
+  }
+  </script>
+
+</body>
+</html>
