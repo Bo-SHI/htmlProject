@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style type="text/css">
+    a
+    {
+        font-size: 16px;
+        color:gray;
+        background-color: none;
+    }
+  </style>
+</head>
+<body>
+  <a id="myAnchor" href="http://www.w3school.com">访问 w3school</a>
+  <br /><br />
+  <input type="button" value="获得焦点" />
+  <input type="button" value="失去焦点" />
+  <script>
+    function getFocus()
+    {
+      document.getElementById("myAnchor").focus();
+    }
+
+    function loseFocus()
+    {
+      document.getElementById("myAnchor").blur();
+    }
+
+    document.getElementsByTagName("input")[0].onclick=function(){getFocus();}
+    document.getElementsByTagName("input")[1].onclick=function(){loseFocus();}
+  </script>
+</body>
+</html>

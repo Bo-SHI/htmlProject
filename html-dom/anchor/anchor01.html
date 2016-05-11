@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <a id="myAnchor" href="http://www.google.com" >访问 google</a>
+  <input type="button" value="改变链接" onclick="changeLink()" />
+  <script>
+    function changeLink()
+    {
+      var e=document.getElementById("myAnchor");
+
+      e.innerHTML="访问 W3School";
+      e.href="http://www/w3school.com";
+      e.target="_blank";
+      e.style.color="gray";
+    }
+  </script>
+</body>
+</html>

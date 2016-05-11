@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>document</title>
+</head>
+<body>
+  <h1 id="head">This is a paragraph</h1>
+  <p>点击标题，会提示出它的值</p>
+
+  <input name="inputName" type="text" size="20" /><br />
+  <input name="inputName" type="text" size="20" /><br />
+  <input name="inputName" type="text" size="20" /><br />
+
+  <input type="button" value="名为“inputName”的元素有多少个" onclick="countInput()"/><br />
+
+  <br />
+
+  <input type="button" value="打开并写入一个新文档" onclick="createNewDoc()" /><br />
+
+  <br />
+  <a name="fir">first anchor</a><br />
+  <a name="sec">second anchor</a><br />
+  <a name="thr">third anchor</a><br />
+  <br />
+  <input type="button" onclick="countAnchor()" value="Anchors count"><br />
+
+  <br />
+  <form name="form1"></form>
+  <form name="form2"></form>
+  <form name="form3"></form>
+
+  <input type="button" value="点解显示表单的数目" onclick="formCount()" /><br />
+
+  <br />
+  <img src="../../image/eg_smile.gif" /><br />
+  <img src="../../image/eg_mouse.jpg" /><br />
+
+  <input type="button" onclick="imgCount()" value="image count" />
+  <br />
+
+  <script>
+    document.write("Hello World!");
+    document.write("<br />");
+    document.write("<p>Hello JavaScript</p>");
+    document.write("<p>title: " + document.title + "</p>");
+    document.write("<p>URL: " + document.URL + "</p>"); //注意这里是大写
+    document.write("<p>Ref: " + document.referrer + "</p>"); //
+
+    document.write("<p>First anchor innerHTML:" + document.anchors[0].innerHTML + "</p>");
+
+    document.write("<p>第一个表单中的名字是：" + document.forms[0].name + "</p>");
+    document.write("<p>第一个表单中的名字是：" + document.getElementsByName("form1")[0].name + "</p>");
+    function alertHead()
+    {
+      alert(document.getElementById("head").innerHTML);
+    }
+
+    document.getElementById("head").onclick=function(){alertHead();}
+
+    function countInput()
+    {
+      alert(document.getElementsByName("inputName").length);
+    }
+
+    function createNewDoc()
+    {
+      var newDoc=document.open("text/html","replace");
+      var txt="<html><body><h1>Hello JavaScript</h1></body></html>"
+      newDoc.write(txt);
+      newDoc.close();
+    }
+
+    function countAnchor()
+    {
+      alert(document.anchors.length); //获取文档中锚的数目
+    }
+
+    function formCount()
+    {
+      alert(document.forms.length)
+    }
+
+    function imgCount()
+    {
+      alert(document.images.length);
+    }
+  </script>
+</body>
+</html>
