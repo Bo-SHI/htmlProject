@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>event</title>
+  <script type="text/javascript">
+    function whichElement(event)
+    {
+      var targ;
+      if(!event)
+      {
+        alert(0);
+        event=window.event;
+      }
+
+      if(event.target)
+      {
+        alert(1);
+        targ=event.target;
+      }
+
+      else if(event.srcElement)
+      {
+        alert(2);
+        targ=event.srcElement;
+      }
+
+      if(targ.nodeType==3)//defeat Safari bug
+        targ=targ.parentNode;
+
+      var tname;
+      tname=targ.tagName;
+      alert("U clicked on a " + tname + " element");
+    }
+  </script>
+</head>
+<body onmousedown="whichElement(event)">
+  <p>在文档中点击某个位置。消息框会提示你所点击的标签的名称。</p>
+  <h1>This is a head</h1>
+  <p>This is a paragraph</p>
+  <img src="../../image/eg_planets.jpg"/>
+</body>
+</html>

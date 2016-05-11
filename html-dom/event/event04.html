@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>event</title>
+  <script type="text/javascript">
+    function coordinates(event)
+    {
+      alert("x:" + event.screenX + "\ny:" + event.screenY);
+    }
+  </script>
+</head>
+<body onmousedown="coordinates(event)">
+  <p>在文档中点击某个位置。消息框会提示出鼠标相对于屏幕的x y坐标。</p>
+</body>
+</html>
