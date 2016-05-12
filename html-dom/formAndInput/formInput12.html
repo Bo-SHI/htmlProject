@@ -1,0 +1,46 @@
+<!DOCTTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    function validate()
+    {
+        var at=document.getElementById("email").value.indexOf("@");
+        var age=document.getElementById("age").value;
+        var name=document.getElementById("fname").value;
+
+        submitRes=true;
+
+        if(isNaN(age) || age < 1 || age > 100)
+        {
+          alert("年龄必须是1~100之间的数字");
+          submitRes=false;
+        }
+
+        if(name.length > 10)
+        {
+          alert("名字必须小于10个字符");
+          submitRes=false;
+        }
+
+        if(at==-1)
+        {
+          alert("不是有效的电子邮件");
+          submitRes=false;
+        }
+
+        return submitRes;
+    }
+  </script>
+  <title>Form--Input</title>
+</head>
+<body>
+  <form action="http://www.google.com" onsubmit="return validate()">
+    名字(最多10个字符):<input type="text" id="fname" size="20"/><br /><br />
+    年龄(1~100):<input type="text" id="age" size="20"><br /><br />
+    电子邮件:<input type="text" id="email" size="20"/><br /><br />
+
+    <input type="submit" value="submit" />
+  </form>
+</body>
+</html>

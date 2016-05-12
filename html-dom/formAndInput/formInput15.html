@@ -1,0 +1,26 @@
+<!DOCTTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    function favBrowser()
+    {
+      var l=document.getElementById("myList");
+      var value=l.options[l.selectedIndex].value;
+      document.getElementById("favorite").value=value;
+    }
+  </script>
+  <title>Form--Input</title>
+</head>
+<body>
+  <form>
+    <select id="myList" onchange="favBrowser()">
+      <option>Internet Explorer</option>
+      <option>Firefox</option>
+      <option>Netscape</option>
+      <option>OPera</option>
+    </select>
+    <p>你最喜欢的浏览器是:<input type="text" id="favorite" size="20" /></p>
+  </form>
+</body>
+</html>
