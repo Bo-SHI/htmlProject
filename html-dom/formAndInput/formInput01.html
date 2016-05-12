@@ -1,0 +1,23 @@
+<!DOCTTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    function changeAction()
+    {
+      var x=document.getElementById("myForm");
+      alert("Original action:" + x.action);
+      x.action="http://www.google.com";
+      alert("New action:" + x.action);
+      x.submit();
+    }
+  </script>
+  <title>Form--Input</title>
+</head>
+<body>
+  <form id="myForm" action="../../image/eg_smile.gif">
+    名称：<input type="text" value="米老鼠" />
+    <input type="button" value="改变action属性并提交表单" onclick="changeAction()" />
+  </form>
+</body>
+</html>
