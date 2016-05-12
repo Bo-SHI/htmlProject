@@ -1,0 +1,30 @@
+<!DOCTTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- <script type="text/javascript" src="../../js_unit/tryCatch.js">
+  </script> -->
+  <script type="text/javascript">
+    function checkLen(x, y)
+    {
+      if(y.length==x.maxLength) //请注意manLength的大小写 对比一下input和javascript里面的写法不一样
+        {
+          var next=x.tabIndex;//同上
+          if(next < document.getElementById("myForm").length)
+          {
+            document.getElementById("myForm").elements[next].focus();
+          }
+        }
+    }
+  </script>
+  <title>Form--Input</title>
+</head>
+<body>
+  <p>这段脚本在达到文本框的最大长度是调到下个文本框</p>
+  <form id="myForm">
+    <input type="text" size="3" maxlength="3" tabindex="1" onkeyup="checkLen(this, this.value)" />
+    <input type="text" size="2" maxlength="2" tabindex="2" onkeyup="checkLen(this, this.value)" />
+    <input type="text" size="3" maxlength="3" tabindex="3" onkeyup="checkLen(this, this.value)" />
+  </from>
+</body>
+</html>

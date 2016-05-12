@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    function access()
+    {
+      // atom自带的插件无法使以下代码生效
+      document.getElementById('fname').accessKey="n";
+      document.getElementById("telNum").accessKey="m";
+      document.getElementById("ie").accessKey="u";
+      document.getElementById("if").accessKey="i";
+      document.getElementById("btn").accessKey="o";
+    }
+  </script>
+</head>
+<body onload="access()">
+  <form>
+    姓名:
+    <input type="text" size="25" id="fname" /><br /><br />
+    电话:
+    <input type="text" size="25" id="telNum" /><br /><br />
+
+    选择你喜欢的浏览器:<br />
+    <input type="radio" id="ie" name="browser" value="Internet Explorer" />Internet Explorer<br />
+    <input type="radio" id="if" name="browser" value="Firefox" />Firefox<br />
+
+    <br />
+    <input type="button" id="btn" value="点击" />
+  </form>
+</body>
+</html>
