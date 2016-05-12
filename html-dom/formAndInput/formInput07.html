@@ -1,0 +1,26 @@
+<!DOCTTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    function check(browser)
+    {
+      document.getElementById("answer").value=browser;
+    }
+  </script>
+  <title>Form--Input</title>
+</head>
+<body>
+  <p>你喜欢哪款浏览器?</p>
+  <form>
+    <input type="radio" name="browser" onclick="check(this.value)" value="Internet Explorer"/> Internet Explorer <br />
+    <input type="radio" name="browser" onclick="check(this.value)" value="Firefox" /> Firefox<br />
+    <input type="radio" name="browser" onclick="check(this.value)" value="Netscape" /> Netscape<br />
+    <input type="radio" name="browser" onclick="check(this.value)" value="Opera" /> Opera<br />
+    <br />
+    你最喜欢的浏览器是：
+    <input type="text" size="20" id="answer" />
+  </form>
+
+</body>
+</html>
