@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    function changeSize()
+    {
+      document.getElementById("compman").height="270";
+      document.getElementById("compman").width="164";
+    }
+
+    function changeImg()
+    {
+      document.getElementById("compman").src="../../image/eg_smile.gif";
+    }
+  </script>
+</head>
+<body>
+  <img src="../../image/eg_bulbon.gif" id="compman" />
+  <br /><br />
+  <input type="button" value="点击改变图像的尺寸" onclick="changeSize()" />
+  <input type="button" value="点击改变图像" onclick="changeImg()" />
+</body>
+</html>
