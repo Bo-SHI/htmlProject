@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    function removeoption()
+    {
+      var s=document.getElementById("mySelect");
+      s.remove(s.selectedIndex);
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <select id="mySelect" size="">
+      <option>BMW</option>
+      <option selected="selected">Vovol</option>
+      <option id="saab">Saab</option>
+      <option>Jili</option>
+    </select>
+    <input type="button" value="删除被选选项" onclick="removeoption()">
+  </form>
+</body>
+</html>

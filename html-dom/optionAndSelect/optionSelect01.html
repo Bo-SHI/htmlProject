@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    function disableList()
+    {
+      document.getElementById("mySelect").disabled=true;
+    }
+    function enableList()
+    {
+      document.getElementById("mySelect").disabled=false;
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <select id="mySelect">
+      <option>BMW</option>
+      <option>Vovol</option>
+      <option>Saab</option>
+    </select>
+    <br /><br />
+    <input type="button" value="禁用列表" onclick="disableList()"/>
+    <input type="button" value="启用列表" onclick="enableList()" />
+  </form>
+</body>
+</html>

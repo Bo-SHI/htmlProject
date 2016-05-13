@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    function getOptions()
+    {
+      var s=document.getElementById("mySelect");
+      var txt="";
+      for(var i = 0; i < s.length; ++i)
+      {
+        txt+=s.options[i].text;
+        txt+="<br />";
+      }
+
+      document.getElementById("text").innerHTML=txt;
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <select id="mySelect" size="">
+      <option>BMW</option>
+      <option>Vovol</option>
+      <option>Saab</option>
+      <option>Jili</option>
+    </select>
+    <input type="button" value="输出所有选项" onclick="getOptions()">
+  </form>
+  <p id="text"></p>
+</body>
+</html>

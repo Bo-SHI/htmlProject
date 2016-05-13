@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    function getLength()
+    {
+      alert(document.getElementById("mySelect").length);
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <select id="mySelect">
+      <option>BMW</option>
+      <option>Vovol</option>
+      <option>Saab</option>
+    </select>
+    <input type="button" value="在这个列表中，一共有多少选项" onclick="getLength()">
+  </form>
+</body>
+</html>
