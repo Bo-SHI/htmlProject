@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    function disableResize()
+    {
+      alert("no");
+      parent.document.getElementById("leftFrame").noResize=true;
+      parent.document.getElementById("rightFrame").noResize=true;
+    }
+    function enableResize()
+    {
+      alert("Yes");
+      parent.document.getElementById("leftFrame").noResize=false;
+      parent.document.getElementById("rightFrame").noResize=false;
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <input type="button" value="不可调整" onclick="disableResize()" />
+    <input type="button" value="可以调整" onclick="enableResize()" />
+  </form>
+  <p>请尝试去调整框架的尺寸</p>
+</body>
+</html>
