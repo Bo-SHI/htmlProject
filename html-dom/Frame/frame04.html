@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    function changeSrc()
+    {
+      alert(1);
+      parent.document.getElementById("leftFrame").src="http://www.google.com.cn";
+      parent.document.getElementById("rightFrame").src="http://w3school.com.cn";
+    }
+  </script>
+</head>
+<body>
+  <input type="button" value="更改框架的源" onclick="changeSrc()" />
+</body>
+</html>
