@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    function changeBorder()
+    {
+      document.getElementById("myTable").border=10;
+    }
+    function changeCellpadding()
+    {
+      document.getElementById("myTable").cellPadding=15;
+    }
+    function changeCellspacing()
+    {
+      document.getElementById("myTable").cellSpacing=15;
+    }
+    function showRow()
+    {
+      alert(document.getElementById("myTable").rows[0].innerHTML);
+    }
+    function showCell()
+    {
+      alert(document.getElementById("myTable").rows[0].cells[0].innerHTML);
+    }
+    function createCaption()
+    {
+      document.getElementById("myTable").createCaption().innerHTML="Caption";
+    }
+
+    function aboveFrames()
+    {
+      document.getElementById("myTable1").frame="above";
+    }
+    function belowFrames()
+    {
+      document.getElementById("myTable1").frame="below";
+    }
+
+    function rowRules()
+    {
+      document.getElementById("myTable2").rules="rows";
+    }
+    function colRules()
+    {
+      document.getElementById("myTable2").rules="cols";
+    }
+    function insRow()
+    {
+      var x=document.getElementById("myTable2").insertRow(0);
+      var y=x.insertCell(0);
+      var z=x.insertCell(1);
+
+      y.innerHTML="New Cell1";
+      z.innerHTML="New Cell2";
+    }
+    function insCell()
+    {
+      var x=document.getElementById("myTable2");
+      if(x.rows.length < 3)
+      {
+        return;
+      }
+
+      var y=x.rows[2].insertCell(0);
+      y.innerHTML="John";
+    }
+
+    function _deleteRow(r)
+    {
+      var x=r.parentNode.parentNode.rowIndex;
+      document.getElementById("myTable3").deleteRow(x);
+    }
+  </script>
+</head>
+<body>
+  <table border="1" id="myTable">
+  <tr>
+    <td>100</td>
+    <td>200</td>
+  </tr>
+  <tr>
+    <td>300</td>
+    <td>400</td>
+  </tr>
+  </table>
+
+  <br />
+
+  <form>
+    <input type="button" size="15" value="改变边框" onclick="changeBorder()"/>
+    <input type="button" size="15" value="改变cellpadding" onclick="changeCellpadding()" />
+    <input type="button" size="15" value="改变cellspacing" onclick="changeCellspacing()" />
+    <br /><br />
+    <input type="button" size="20" value="显示第一行的innerHTML" onclick="showRow()" />
+    <input type="button" size="20" value="显示第一单元格的innerHTML" onclick="showCell()" />
+    <br /><br />
+    <input type="button" size="20" value="创建标题" onclick="createCaption()" />
+  </form>
+
+
+  <table id="myTable1">
+    <tr>
+      <td>100</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>300</td>
+      <td>400</td>
+    </tr>
+  </table>
+  <br />
+  <form>
+    <input type="button" size="15" value="显示上边框" onclick="aboveFrames()"/>
+    <input type="button" size="15" value="显示下边框" onclick="belowFrames()" />
+  </form>
+
+  <table id="myTable2" border="1">
+    <tr>
+      <td>Row1 cell1</td>
+      <td>Row1 cell2</td>
+    </tr>
+    <tr>
+      <td>Row2 cell1</td>
+      <td>Row2 cell2</td>
+    </tr>
+    <tr>
+      <td>Row3 cell1</td>
+      <td>Row3 cell2</td>
+    </tr>
+  </table>
+  <br />
+  <form>
+    <input type="button" size="15" value="仅显示行边框" onclick="rowRules()"/>
+    <input type="button" size="15" value="仅显示列边框" onclick="colRules()" />
+    <br /><br />
+    <input type="button" size="15" value="插入行" onclick="insRow()" />
+    <input type="button" size="15" value="向第三行插入单元格" onclick="insCell()" />
+  </form>
+
+  <br /><br />
+  <table id="myTable3" border="1">
+    <tr>
+      <td>Row1</td>
+      <td><input type="button" value="delete" onclick="_deleteRow(this)"/>
+    </tr>
+    <tr>
+      <td>Row2</td>
+      <td><input type="button" value="delete" onclick="_deleteRow(this)"/>
+    </tr>
+    <tr>
+      <td>Row3</td>
+      <td><input type="button" value="delete" onclick="_deleteRow(this)"/>
+    </tr>
+  </table>
+
+
+</body>
+</html>
