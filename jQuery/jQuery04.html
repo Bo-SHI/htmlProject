@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      //todo
+      $(".ex .hide").click(function(){
+        $(this).parents(".ex").hide("slow");
+      });
+    });
+  </script>
+  <style type="text/css">
+    div.ex {
+      background-color:e5eecc;
+      padding:7px;
+      border:solid 1px #c3c3c3;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>中国办事处</h2>
+
+  <div class="ex">
+    <input class="hide" type="button" value="隐藏" /><br /><br />
+    <p>联系人：张先生<br />北三环中路 100 号 <br /> 北京
+  </div>
+
+  <h2>美国办事处</h2>
+
+  <div class="ex">
+    <input class="hide" type="button" value="隐藏" /><br /><br />
+    <p>联系人：David<br />第五大街 200 号 <br /> 美国
+  </div>
+</body>
+</html>
