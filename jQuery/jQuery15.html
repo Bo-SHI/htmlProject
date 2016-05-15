@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="charset=utf-8" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js">
+  </script>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+
+      $("#Begin").click(function(){
+        $("div").animate({left:'200px', width:'400px'}, 5000);
+        $("div").animate({fontSize:'3em'}, 5000);
+      });
+
+      $("#Stop").click(function(){
+        $("div").stop();
+      });
+
+      $("#StopAll").click(function(){
+        $("div").stop(true);
+      });
+
+      $("#StopEnd").click(function(){
+        $("div").stop(true, true);
+      });
+    });
+  </script>
+  <style type="text/css">
+    div{
+      position: absolute;
+      background: gray;
+      width: 200px;
+      height: auto;
+    }
+
+    div p{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <input id="Begin" type="button" value="开始" />
+  <input id="Stop" type="button" value="停止" />
+  <input id="StopAll" type="button" value="全部停止" />
+  <input id="StopEnd" type="button" value="停止但要完成" />
+  <br /><br />
+  <div>
+    <p>Hello jQuery!</p>
+  </div>
+</body>
+</html>

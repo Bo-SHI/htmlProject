@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+      $(".filp").click(function(){
+        $(".panel").slideToggle(5000);
+      });
+
+      $("input").click(function(){
+        $(".panel").stop();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+    p.filp,div.panel{
+      width:480px;
+      margin:0px;
+      padding:5px;
+      text-align: center;
+      background: #e5eecc;
+      border:solid 1px #c3c3c3;
+    }
+    div.panel{
+      border-top:0px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="button" value="stop" /><br /><br />
+  <div>
+    <p class="filp">点击这里，隐藏/显示面板</p>
+    <div class="panel">
+      <p>一寸光阴一寸金，因此，我们为您提供快捷易懂的学习内容。</p>
+      <p>在这里，您可以通过一种易懂的便利的模式获得您需要的任何知识。</p>
+    </div>
+  </div>
+</body>
+</html>
