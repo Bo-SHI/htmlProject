@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      //todo
+      $("div.ex1").click(function(){
+        $("div.ex2").toggle("slow");
+      });
+    });
+  </script>
+
+  <style type="text/css">
+    div.ex1{
+      background-color:e5eecc;
+      padding:5px;
+      border:solid 1px #3c3c3c;
+    }
+
+    div.ex2{
+      background-color:e5eecc;
+      padding:5px;
+      border:solid 1px #3c3c3c;
+      border-top: none;
+    }
+
+    div p{
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ex1">
+    <p>点击这里，隐藏/显示面板</p>
+  </div>
+  <div class="ex2">
+    <p>一寸光阴一寸金，因此，我们为您提供快捷易懂的学习内容。<br />
+      在这里，您可以通过一种易懂的便利的模式获得您需要的任何知识。</p>
+  </div>
+</body>
+</html>
