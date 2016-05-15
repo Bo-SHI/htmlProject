@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+      //todo
+      $("input").click(function(){
+        $("div").animate({opacity:'0.5', left:'250px', width:'400px'});
+        $("p").animate({fontSize:'3em'}, "slow");
+      });
+    });
+
+  </script>
+
+  <style type="text/css">
+  div{
+    background: gray;
+    width:200px;
+    height:auto;
+    border:solid 1px black;
+    position:absolute;
+  }
+
+  div p{
+    text-align: center;
+    padding:3px;
+  }
+  </style>
+</head>
+
+<body>
+  <input type="button" value="开始动画" /><br /><br />
+  <div>
+    <p>Hello jQuery!</p>
+  </div>
+</body>
+</html>

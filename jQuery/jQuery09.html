@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+      //todo
+      $("#begin").click(function(){
+        $("#demo").animate({left:'250px'});
+      });
+    });
+
+  </script>
+
+  <style type="text/css">
+    #demo
+    {
+      background:blue;
+      width:150;
+      height:150px;
+      position:absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <input id="begin" type="button" value="开始动画" /><br />
+  <p>默认情况下，所有的HTML元素的位置都是静态的，并且无法移动。如需对位置进行操作，记得首先将元素的Css position 属性设置为relative、fixed或absolute。</p>
+  <div id="demo">
+  </div>
+</body>
+</html>
