@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+      $(".filp").click(function(){
+        $(".panel").slideUp();
+        $(".panel").slideDown();
+        $(".panel").slideUp("slow");
+        $(".panel").slideDown("slow");
+        $(".panel").slideUp(3000);
+        $(".panel").slideDown(3000);
+        $(".panel").slideToggle("slow");
+      });
+    });
+
+  </script>
+
+  <style type="text/css">
+    p.filp,div.panel{
+      width:480px;
+      margin:0px;
+      padding:5px;
+      text-align: center;
+      background: #e5eecc;
+      border:solid 1px #c3c3c3;
+    }
+    div.panel{
+      border-top:0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p class="filp">点击这里，隐藏/显示面板</p>
+    <div class="panel">
+      <p>一寸光阴一寸金，因此，我们为您提供快捷易懂的学习内容。</p>
+      <p>在这里，您可以通过一种易懂的便利的模式获得您需要的任何知识。</p>
+    </div>
+  </div>
+</body>
+</html>
