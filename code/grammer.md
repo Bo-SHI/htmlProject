@@ -86,3 +86,31 @@ CSS 属性选择器
 [attribute*=value]  选取属性值包含指定值的每个元素
 
 多属性选择器 将多个属性选择器链接在一起
+
+
+CSS 背景
+
+所有的背景属性都不能继承
+
+CSS允许应用纯色作为背景 也允许使用背景图片创建相当复杂的效果
+
+background-color 为元素设置背景色 默认值为tramsparent
+
+background-image 设置背景图像 默认值为none 必须设置  URL h1 {background-image:url(*.gif)}
+
+background-repeat 可以对背景图像进行平铺 默认值为 repeat   repeat-x、 repeat-y分别导致图像在水平 垂直方向进行平铺 no-repeat不允许图像平铺
+
+background-position 改变图像在背景中的位置 可以使用关键字 百分数值 长度值 关键字为 center top buttom left right 一般关键字成对出现 如果只出现一个关键字 则认为另一个为center
+                    百分数值 同时作用于图像和元素 该属性的默认值是 0% 0%   
+                    长度值 解释的是元素内边距区左上角的偏移 偏移点是图像的左上角
+
+background-attachment 图像是否滚动 默认scroll滚动    fixed固定    inherit继承
+
+background 可简写属性   body {background : #00FF00 url(*.gif) no-repeat fixed  center;}  
+
+
+
+CSS 文本
+
+文本属性可以定义文本的外观
+通过文本属性，可以改变文本的颜色、字符间距、对齐文本、装饰文本、对文本进行缩进等
