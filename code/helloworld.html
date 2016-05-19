@@ -5,14 +5,29 @@
 			body {background-color : gray;
 			color:blue;}
 			h1 {text-align : center}
+
+			#id1 #id2 <!-- 派生选择器  后代选择器 -->
+			{
+				color:black;
+				font-size: 30px;
+			}
+
+			
 		</style>
 	</head>
 	<body>
 		<h1>Hello World!</h1>
-		
+
 		<div>
 		Hello World
 		<p>Hello World</p>
 		</div>
+
+		<div id="id1">
+			<div id="id2">
+				ID1
+			</div>
+		</div>
+
 	</body>
 </html>
