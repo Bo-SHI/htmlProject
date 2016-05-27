@@ -101,15 +101,15 @@
 
 - background-image 设置背景图像 默认值为none 必须设置  URL h1 {background-image:url(*.gif)}
 
-background-repeat 可以对背景图像进行平铺 默认值为 repeat   repeat-x、 repeat-y分别导致图像在水平 垂直方向进行平铺 no-repeat不允许图像平铺
+- background-repeat 可以对背景图像进行平铺 默认值为 repeat   repeat-x、 repeat-y分别导致图像在水平 垂直方向进行平铺 no-repeat不允许图像平铺
 
-background-position 改变图像在背景中的位置 可以使用关键字 百分数值 长度值 关键字为 center top buttom left right 一般关键字成对出现 如果只出现一个关键字 则认为另一个为center
+- background-position 改变图像在背景中的位置 可以使用关键字 百分数值 长度值 关键字为 center top buttom left right 一般关键字成对出现 如果只出现一个关键字 则认为另一个为center
                     百分数值 同时作用于图像和元素 该属性的默认值是 0% 0%   
                     长度值 解释的是元素内边距区左上角的偏移 偏移点是图像的左上角
 
-background-attachment 图像是否滚动 默认scroll滚动    fixed固定    inherit继承
+- background-attachment 图像是否滚动 默认scroll滚动    fixed固定    inherit继承
 
-background 可简写属性   body {background : #00FF00 url(*.gif) no-repeat fixed  center;}  
+- background 可简写属性   body {background : #00FF00 url(*.gif) no-repeat fixed  center;}  
 
 
 
