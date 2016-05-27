@@ -177,8 +177,11 @@
 #### 链接的四种状态：
 
 > a:link 普通、未被访问的链接
+
 > a:visited 用户已经访问过的链接
+
 > a:hover 鼠标指针位于链接的上方
+
 > a:active 链接被点击的时刻
 
 - 当为链接的不同状态设置样式的时候：
@@ -214,6 +217,7 @@ background-color
 ## CSS轮廓
 
 >CSS轮廓是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用
+
 >CSS outline属性规定元素轮廓的样式、颜色和深度
 
 - outline 简写属性
@@ -247,6 +251,7 @@ background-color
 ## CSS边框
 
 > 元素的边框是围绕元素内容和内边距的一条或多条线
+
 > CSS border属性可以规定元素边框的样式 颜色 和宽度
 
 > border-style none(默认值)  hidden(同none 但是用于table时，可以解决边框冲突) dotted dashed solid double groove ridge insert outset
